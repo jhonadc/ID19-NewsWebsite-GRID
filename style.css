@@ -122,6 +122,16 @@ h1, h2, h3, h4, h5, h6 {
 .p-2 { padding: 2rem 0 }
 .p-3 { padding: 3rem 0 }
 
+.list li {
+  padding: .5rem 0;
+  border-bottom: #555 dotted 1px;
+  width: 90%;
+}
+
+.list li a:hover {
+  color: var(--primary-color) !important
+}
+
 /*Navigation*/
 #main-nav {
   background: white;
@@ -259,4 +269,13 @@ h1, h2, h3, h4, h5, h6 {
 
 #main-footer .footer-container input[type="submit"] {
   width: 90%;
+}
+
+@media only screen and (max-width: 768px) {
+
+  /*Nav*/
+  #main-nav .social {
+    display: none;
+  }
+
 }
