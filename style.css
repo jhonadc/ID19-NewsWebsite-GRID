@@ -295,4 +295,26 @@ h1, h2, h3, h4, h5, h6 {
   #home-articles .articles-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  #home-articles .articles-container>*:first-child,
+  #home-articles .articles-container>*:last-child {
+    grid-template-columns: 1fr;
+    grid-column: 1;
+    /*2columns article back to 1 for mobile;*/
+  }
 }
+
+  @media(max-width: 600px) {
+    /*will stack grid itens*/
+    #showcase .showcase-container,
+    #home-articles .articles-container,
+    #main-footer .footer-container {
+      grid-template-columns: 1fr;
+    }
+
+    #main-footer .footer-container>*:last-child {
+      grid-column: 1; /*span would not allow to change to 1fr*/
+    }
+
+  }
+
